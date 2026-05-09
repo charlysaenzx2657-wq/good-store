@@ -27,11 +27,13 @@ function updateCartBadge() {
   if (total > 0) {
     badge.textContent = total;
     badge.style.display = 'inline-flex';
+    const dot = document.querySelector('.cart-dot'); if(dot) dot.style.display = 'block';
     badge.style.animation = 'none';
     badge.offsetHeight;
     badge.style.animation = 'badgePop 0.3s cubic-bezier(0.34,1.56,0.64,1)';
   } else {
     badge.style.display = 'none';
+    const dot = document.querySelector('.cart-dot'); if(dot) dot.style.display = 'none';
   }
 }
 

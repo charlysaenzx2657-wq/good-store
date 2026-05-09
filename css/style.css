@@ -246,3 +246,16 @@ button { cursor:pointer; font-family:inherit }
   .main-nav { top: 0 !important; }
   .hero { padding-top: 8px !important; }
 }
+
+/* PUNTO ROJO CARRITO */
+.nav-btn[data-section="cart"] { position: relative; }
+.cart-dot {
+  position: absolute;
+  top: 4px; right: 4px;
+  width: 8px; height: 8px;
+  background: #e8412a;
+  border-radius: 50%;
+  display: none;
+  animation: badgePop 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: 0 0 6px rgba(232,65,42,0.8);
+}
