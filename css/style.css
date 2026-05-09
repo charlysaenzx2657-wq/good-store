@@ -63,7 +63,7 @@ button { cursor:pointer; font-family:inherit }
 .hero {
   position:relative; z-index:1; min-height:auto;
   display:flex; align-items:center; justify-content:space-between;
-  max-width:1100px; margin:0 auto; padding:100px 24px 60px; gap:40px;
+  max-width:1100px; margin:0 auto; padding:20px 24px 40px; gap:40px;
 }
 .hero::before {
   content:''; position:absolute; top:10%; left:-200px;
