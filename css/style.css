@@ -23,7 +23,7 @@
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
 html { scroll-behavior: smooth }
-body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; overflow-x:hidden }
+body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); min-height:80vh; overflow-x:hidden }
 a { color:inherit; text-decoration:none }
 button { cursor:pointer; font-family:inherit }
 
