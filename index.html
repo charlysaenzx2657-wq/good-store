@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENSIS GOOD FF — Tienda Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="img/sistema-sensis.jpg" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+        <div>
+          <span class="logo-title">SENSIS GOOD FF</span>
+          <span class="logo-sub">Sistema Oficial · México 🇲🇽</span>
+        </div>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <button class="nav-btn active" data-section="products">Tienda</button>
+        <button class="nav-btn" data-section="cart">
+          Carrito
+          <span class="cart-badge" id="cart-badge" style="display:none">0</span>
+        </button>
+        <button class="nav-btn" data-section="payments">Pagos</button>
+        <button class="nav-btn" data-section="contact">Contacto</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag reveal">Free Fire · México 🇲🇽</div>
+      <h1 class="hero-title reveal">Domina el <span class="gold">Juego</span><br>con las Mejores<br>Sensibilidades</h1>
+      <p class="hero-desc reveal">Configuraciones premium, optimizaciones reales y herramientas exclusivas para jugadores serios.</p>
+      <div class="hero-btns reveal">
+        <button class="btn-primary" onclick="showSection('products')">Ver Productos</button>
+        <a class="btn-ghost" href="https://chat.whatsapp.com/HkTYQ7hvJKY6t5PRnliyks" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.54 5.876L.057 23.428a.5.5 0 0 0 .609.611l5.737-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.925 0-3.72-.5-5.28-1.373l-.377-.216-3.908 1.026 1.01-3.8-.232-.39A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hex-ring"></div>
+      <img src="img/sistema-sensis.jpg" alt="Sensis" class="hero-logo-img" onerror="this.style.display='none'">
+      <div class="hero-badge-float">🔥 <span>+500 usuarios</span></div>
+    </div>
+  </section>
+
+  <!-- SOCIALS BAR -->
+  <div class="socials-bar">
+    <a class="soc-btn soc-wa" href="https://chat.whatsapp.com/HkTYQ7hvJKY6t5PRnliyks" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.54 5.876L.057 23.428a.5.5 0 0 0 .609.611l5.737-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.925 0-3.72-.5-5.28-1.373l-.377-.216-3.908 1.026 1.01-3.8-.232-.39A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Grupo WhatsApp
+    </a>
+    <a class="soc-btn soc-tt" href="https://tiktok.com/@sensisgoodffoficial" target="_blank">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      @sensisgoodffoficial
+    </a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <section class="page-section" id="section-products">
+      <div class="section-header">
+        <h2 class="section-title">Productos</h2>
+        <p class="section-sub">Elige tu configuración ideal</p>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <section class="page-section hidden" id="section-cart">
+      <div class="section-header">
+        <h2 class="section-title">Carrito</h2>
+        <p class="section-sub">Revisa tu pedido</p>
+      </div>
+      <div id="cartItems"></div>
+    </section>
+
+    <section class="page-section hidden" id="section-payments">
+      <div class="section-header">
+        <h2 class="section-title">Métodos de Pago</h2>
+        <p class="section-sub">Paga como más te convenga</p>
+      </div>
+      <div class="pay-grid">
+        <div class="pay-card featured">
+          <div class="pay-icon">🟢</div>
+          <div class="pay-name">Spin by OXXO</div>
+          <span class="pay-tag">Recomendado</span>
+        </div>
+        <div class="pay-card"><div class="pay-icon">💳</div><div class="pay-name">Visa</div></div>
+        <div class="pay-card"><div class="pay-icon">💳</div><div class="pay-name">Mastercard</div></div>
+        <div class="pay-card"><div class="pay-icon">🏪</div><div class="pay-name">OXXO Pay</div></div>
+        <div class="pay-card"><div class="pay-icon">🔵</div><div class="pay-name">PayPal</div></div>
+        <div class="pay-card"><div class="pay-icon">📱</div><div class="pay-name">Transferencia</div></div>
+      </div>
+      <div class="info-box">
+        <strong>💡 Sobre tu tarjeta Spin by OXXO</strong>
+        <p>Spin es una tarjeta Mastercard de débito, aceptada en casi todas partes. Para cobrar a tus clientes sin registrarte en nada extra:</p>
+        <ul>
+          <li>Comparte tu <strong>CLABE interbancaria</strong> o número de tarjeta Spin para transferencias directas.</li>
+          <li>Usa <strong>CoDi / DiMo</strong> — genera un QR de cobro gratis desde la app.</li>
+          <li>Crea un <strong>link de pago de Spin</strong> desde la app (si tu versión lo tiene).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page-section hidden" id="section-contact">
+      <div class="section-header">
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-sub">¿Dudas? Te respondemos rápido</p>
+      </div>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label>Tu nombre</label>
+          <input type="text" placeholder="Ej: Carlos" required>
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tucorreo@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea placeholder="Escribe tu duda o pedido..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar mensaje →</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 SENSIS GOOD FF · Hecho con 🔥 en México</p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
