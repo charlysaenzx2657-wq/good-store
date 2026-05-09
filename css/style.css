@@ -235,7 +235,7 @@ button { cursor:pointer; font-family:inherit }
 }
 
 /* FIX HEADER MÓVIL */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .site-header { position: relative !important; }
   .hero { padding-top: 10px !important; }
 }
