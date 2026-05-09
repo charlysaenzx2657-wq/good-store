@@ -239,3 +239,10 @@ button { cursor:pointer; font-family:inherit }
   .site-header { position: relative !important; }
   .hero { padding-top: 10px !important; }
 }
+
+/* HEADER FIJO MÓVIL */
+@media (max-width: 768px) {
+  .site-header { position: relative !important; top: auto !important; }
+  .main-nav { top: 0 !important; }
+  .hero { padding-top: 8px !important; }
+}
