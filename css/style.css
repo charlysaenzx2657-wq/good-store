@@ -279,3 +279,17 @@ button { cursor:pointer; font-family:inherit }
   animation: pulseDot 1.5s ease-in-out infinite !important;
   pointer-events: none;
 }
+
+/* ── PUNTO EN HAMBURGER ── */
+.hamburger { position: relative !important; }
+.hamburger #cart-dot {
+  position: absolute !important;
+  top: 2px !important; right: 2px !important;
+  width: 10px !important; height: 10px !important;
+  background: #e8412a !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 10px rgba(232,65,42,1) !important;
+  animation: pulseDot 1.2s ease-in-out infinite !important;
+  pointer-events: none;
+  display: none;
+}
