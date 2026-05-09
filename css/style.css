@@ -233,3 +233,9 @@ button { cursor:pointer; font-family:inherit }
   box-shadow: 0 8px 30px rgba(37,211,102,0.4) !important;
   transform: translateY(-2px);
 }
+
+/* FIX HEADER MÓVIL */
+@media (max-width: 480px) {
+  .site-header { position: relative !important; }
+  .hero { padding-top: 10px !important; }
+}
