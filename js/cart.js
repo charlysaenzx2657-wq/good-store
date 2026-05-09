@@ -1,8 +1,5 @@
-/* cart.js — lógica del carrito */
-
-// ✏️ PON TU NÚMERO AQUÍ (52 + 10 dígitos, sin espacios ni +)
+/* cart.js */
 const WA_NUMBER = '526521038109';
-
 let cart = [];
 
 function addToCart(id) {
@@ -24,16 +21,17 @@ function removeFromCart(id) {
 function updateCartBadge() {
   const total = cart.reduce((a, b) => a + b.qty, 0);
   const badge = document.getElementById('cart-badge');
+  const dot = document.getElementById('cart-dot');
   if (total > 0) {
     badge.textContent = total;
     badge.style.display = 'inline-flex';
-    const dot = document.querySelector('.cart-dot'); if(dot) dot.style.display = 'block';
     badge.style.animation = 'none';
     badge.offsetHeight;
     badge.style.animation = 'badgePop 0.3s cubic-bezier(0.34,1.56,0.64,1)';
+    if (dot) { dot.style.display = 'block'; }
   } else {
     badge.style.display = 'none';
-    const dot = document.querySelector('.cart-dot'); if(dot) dot.style.display = 'none';
+    if (dot) { dot.style.display = 'none'; }
   }
 }
 
@@ -68,19 +66,14 @@ function renderCart() {
     </button>`;
 }
 
-/* ── CHECKOUT: abre WhatsApp con el pedido escrito automático ── */
 function goCheckout() {
   if (!cart.length) return;
-
   const total = cart.reduce((a, b) => a + b.price * b.qty, 0);
-
   let msg = '🎯 *Hola SENSIS GOOD FF, quiero hacer un pedido:*\n\n';
   cart.forEach(item => {
     msg += `▸ *${item.name}*${item.qty > 1 ? ` ×${item.qty}` : ''} — $${item.price * item.qty} MXN\n`;
   });
   msg += `\n💰 *Total: $${total} MXN*\n\n¿Cómo procedo con el pago? 🙏`;
-
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
   showToast('Abriendo WhatsApp con tu pedido 📲');
 }
