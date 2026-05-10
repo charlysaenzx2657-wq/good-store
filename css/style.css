@@ -315,14 +315,87 @@ button { cursor:pointer; font-family:inherit }
 /* ── PARTÍCULAS ROJAS MÁS VISIBLES ── */
 #particles-canvas { opacity: 0.75; }
 
-/* FIX BOTÓN CUENTA MÓVIL */
-.btn-login-nav {
-  font-size: 13px !important;
-  padding: 6px 12px !important;
+/* ══ AUTH SCREEN ══ */
+#auth-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
-@media (max-width: 768px) {
-  .btn-login-nav {
-    width: auto !important;
-    align-self: flex-start !important;
-  }
+.auth-box {
+  background: var(--surface);
+  border: 1px solid var(--gold-dk);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 60px rgba(212,160,23,0.1);
+}
+.auth-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+.auth-logo img {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--gold-dk);
+}
+.auth-logo span {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold-lt);
+  letter-spacing: 1px;
+}
+.auth-tabs {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  margin-bottom: 24px;
+}
+.auth-tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all var(--transition);
+}
+.auth-tab.active {
+  background: rgba(212,160,23,0.12);
+  color: var(--gold-lt);
+}
+.auth-btn { width: 100%; margin-top: 8px; }
+.verify-msg {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.verify-msg strong, #verify-email-label {
+  color: var(--gold-lt);
+  font-weight: 600;
+}
+
+/* ══ NAV LOGOUT ══ */
+.nav-logout {
+  color: #ff7060 !important;
+  border-color: rgba(232,65,42,0.3) !important;
+}
+.nav-logout:hover {
+  background: rgba(232,65,42,0.1) !important;
+  color: #ff7060 !important;
 }
