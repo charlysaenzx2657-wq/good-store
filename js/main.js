@@ -40,3 +40,9 @@ function renderProducts() {
     </div>`;
   }).join('');
 }
+
+// Arrancar directo
+renderProducts();
+setTimeout(() => {
+  document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('visible'));
+}, 100);
