@@ -85,9 +85,9 @@
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 200) {
           ctx.save();
-          ctx.globalAlpha = (1 - dist / 200) * 0.5;
+          ctx.globalAlpha = (1 - dist / 200) * 0.18;
           ctx.strokeStyle = '#e8412a';
-          ctx.lineWidth = 1.2;
+          ctx.lineWidth = 0.7;
           ctx.beginPath();
           ctx.moveTo(redNodes[i].x, redNodes[i].y);
           ctx.lineTo(redNodes[j].x, redNodes[j].y);
