@@ -84,8 +84,16 @@ window.addEventListener('scroll', () => {
 });
 
 document.getElementById('hamburger').addEventListener('click', () => {
-  document.getElementById('main-nav').classList.toggle('open');
-  document.getElementById('hamburger').classList.toggle('open');
+  const nav = document.getElementById('main-nav');
+  const hbg = document.getElementById('hamburger');
+  const isOpen = nav.classList.contains('open');
+  if (isOpen) {
+    nav.classList.remove('open');
+    hbg.classList.remove('open');
+  } else {
+    nav.classList.add('open');
+    hbg.classList.add('open');
+  }
 });
 
 document.querySelectorAll('.nav-btn[data-section]').forEach(btn => {
