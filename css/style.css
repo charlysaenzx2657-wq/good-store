@@ -314,3 +314,15 @@ button { cursor:pointer; font-family:inherit }
 
 /* ── PARTÍCULAS ROJAS MÁS VISIBLES ── */
 #particles-canvas { opacity: 0.75; }
+
+/* FIX BOTÓN CUENTA MÓVIL */
+.btn-login-nav {
+  font-size: 13px !important;
+  padding: 6px 12px !important;
+}
+@media (max-width: 768px) {
+  .btn-login-nav {
+    width: auto !important;
+    align-self: flex-start !important;
+  }
+}
