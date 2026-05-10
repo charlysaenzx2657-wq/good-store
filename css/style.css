@@ -404,3 +404,12 @@ button { cursor:pointer; font-family:inherit }
 /* NAV LOGOUT */
 .nav-logout { color: #ff7060 !important; }
 .nav-logout:hover { background: rgba(232,65,42,0.1) !important; color: #ff7060 !important; }
+
+/* FIX SALIR MÓVIL */
+@media (max-width: 768px) {
+  .nav-logout {
+    width: auto !important;
+    align-self: flex-start !important;
+    margin-top: 4px;
+  }
+}
