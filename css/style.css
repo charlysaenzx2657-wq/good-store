@@ -413,3 +413,31 @@ button { cursor:pointer; font-family:inherit }
     margin-top: 4px;
   }
 }
+
+/* ── BOTÓN SALIR ÍCONO ── */
+.btn-logout-icon {
+  display: none;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(232,65,42,0.4);
+  background: rgba(232,65,42,0.08);
+  color: #ff7060;
+  font-size: 16px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.btn-logout-icon:hover {
+  background: rgba(232,65,42,0.2);
+  border-color: var(--red);
+}
+@media (max-width: 768px) {
+  .btn-logout-icon { display: flex; }
+  .nav-logout { display: none !important; }
+}
+@media (min-width: 769px) {
+  .btn-logout-icon { display: none; }
+  .nav-logout { display: block !important; }
+}
