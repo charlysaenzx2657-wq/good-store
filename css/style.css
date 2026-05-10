@@ -251,7 +251,7 @@ button { cursor:pointer; font-family:inherit }
 }
 
 /* ── PARTÍCULAS ROJAS MÁS VISIBLES ── */
-#particles-canvas { opacity: 0.75; }
+#particles-canvas { opacity: 0.9; }
 
 /* ══ NAV LOGOUT ══ */
 .nav-logout {
